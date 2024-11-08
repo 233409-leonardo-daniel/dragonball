@@ -1,0 +1,68 @@
+/* Contenedor general */
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Contenedor de la cuadrícula de personajes */
+  .character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 4 columnas automáticas */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+  }
+  
+  /* Estilo de las tarjetas de personajes */
+  .character-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .character-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+  }
+  
+  /* Imagen del personaje */
+  .character-card img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 50%; /* Imagen circular */
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo para el nombre del personaje */
+  .character-card h3 {
+    margin: 10px 0;
+    color: #333;
+    font-size: 1.2em;
+  }
+  
+  /* Estilo para la descripción del personaje */
+  .character-card p {
+    color: #666;
+    font-size: 0.9em;
+    margin: 5px 0;
+    line-height: 1.4;
+  }
+  
+  /* Estilo para el mensaje de carga */
+  .loading {
+    font-size: 1.2em;
+    color: #888;
+  }
+  

@@ -1,0 +1,16 @@
+<div *ngIf="character">
+    <h2>{{ character.name }}</h2>
+    <img [src]="character.image" alt="{{ character.name }}" />
+    <p><strong>Descripción:</strong> {{ character.description }}</p>
+    <p><strong>Ki:</strong> {{ character.ki }}</p>
+    <p><strong>Max Ki:</strong> {{ character.maxKi }}</p>
+    <p><strong>Raza:</strong> {{ character.race }}</p>
+    <p><strong>Planeta de Origen:</strong> {{ character.originPlanet?.name }}</p>
+    <img *ngIf="character.originPlanet?.image" 
+         [src]="character.originPlanet.image" 
+         alt="Imagen de {{ character.originPlanet.name }}" />
+  </div>
+  <ng-template #loading>
+    <p class="loading">Loading character...</p>
+  </ng-template>
+  
