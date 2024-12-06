@@ -1,0 +1,21 @@
+<app-navbar/>
+
+<div class="container">
+    <h2 class="subtitle">Personajes de Dragon Ball</h2>
+    <div class="characters-grid">
+        <app-card *ngFor="let character of characters" 
+                 [character]="character" 
+                 (id)="getCharacterIdHandler($event)"/>
+    </div>
+</div>
+
+<p-dialog 
+    [header]="selectedCharacter?.name || 'Detalles del personaje'" 
+    [modal]="true"
+    [(visible)]="visible" 
+    [style]="{ width: '50rem', backgroundColor: 'white' }" 
+    [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }">
+    <div *ngIf="selectedCharacter">
+        <pre>{{ selectedCharacter | json }}</pre>
+    </div>
+</p-dialog>

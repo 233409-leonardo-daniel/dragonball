@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-image-container">
+        <img [src]="character.image" 
+             alt="{{ character.name }}" 
+             (click)="id.emit(character.id)"
+             class="card-image"/>
+    </div>
+    <div class="card-content">
+        <h3 class="card-title">{{ character.name }}</h3>
+        <p class="card-text">Ki: {{ character.ki }}</p>
+        <p class="card-text">Max Ki: {{ character.maxKi }}</p>
+        <p class="card-text">Raza: {{ character.race }}</p>
+    </div>
+</div>
